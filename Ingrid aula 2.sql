@@ -1,0 +1,48 @@
+/*Criando tabelas*/
+create table `bd_caso_esdtudo_vendas` . `tb_forn`(
+ `forn_cod` int not null,
+ `forn_nome` varchar(60) null,
+ `forn_tel` varchar(13) null,
+ primary key(`forn_cod`)
+);
+create table `bd_caso_esdtudo_vendas` . `tb_depto`(
+ `depto_cod`  int not null primary key, 
+ `depto_desc` varchar(60) null
+); 
+create table `bd_caso_esdtudo_vendas` . `tb_func`(
+ `func_cod` int not null primary key,
+ `func_depto` int not null,
+ `func_nome` varchar(60) null,
+ `func_cpf` varchar(18) null
+);
+create table `bd_caso_esdtudo_vendas` . `tb_compra`(
+ `compra_cod` int not null primary key,
+  `compra_cli_cod` int not null,
+  `compra_func_cod` int not null,
+  `compra_qtd_cod` int not null
+  );
+create table `bd_caso_esdtudo_vendas` . `tb_cli`(
+ `cli_cod` int not null primary key,
+ `cli_nome` varchar (60) not null,
+ `cli_cpf` varchar (18) not null,
+ `cli_rua` varchar (48) null,
+ `cli_num` varchar (5) null,
+ `cli_end_bairro` varchar (30) null,
+ `cli_end_cep` varchar (9) null
+); 
+create table `bd_caso_esdtudo_vendas` . `tb_prod_compra`(
+`prod_cod` int not null,
+`compra_cod` int not null);
+create table `bd_caso_esdtudo_vendas` . `tb_prod`(
+ `prod_cod` int not null primary key,
+ `prod_forn_cod` int not null,
+ `prod_desc` varchar (60) null,
+ `prod_vlr` decimal null
+); 
+create table `bd_caso_esdtudo_vendas` . `tb_cli_tel`(
+ `tel_cod` int not null primary key,
+ `tel_cli_cod` int not null,
+ `tel_num` varchar (13) not null
+); 
+																										
+  
