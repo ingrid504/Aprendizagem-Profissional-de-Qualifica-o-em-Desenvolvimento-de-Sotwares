@@ -1,5 +1,4 @@
 /*Criando novo usuario no servidor*/
-/*Criando novo usuario no servidor*/
 create user 'lara.rodrigues'@'localhost'identified by'123456';
 create user 'izabella.oliveira'@'localhost'identified by'123456';
 create user 'luane.gabrielly'@'localhost'identified by'123456';
