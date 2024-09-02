@@ -1,4 +1,4 @@
-/* Alterando os registro das tabelaas*/
+/* Alterando os registro das tabelas*/
 update  `bd_caso_estudo_vendas`.`tb_cli`
 set cli_nome = 'Novo Nome Cliente'
 where cli_cod = 1;
