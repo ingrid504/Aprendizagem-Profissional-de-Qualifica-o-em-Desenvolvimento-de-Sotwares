@@ -27,3 +27,8 @@ INSERT INTO `bd_exercicio`.`tb_departamento`(depto_codigo, depto_nome, local_cod
       /*INSERINDO FUNCIONARIO QUE TRABALHA E GERENCIA O DEPARTAMENTO 2, E TRABALHA TAMBÉM NO PROJETO 2*/
       INSERT INTO `bd_exercicio`.`tb_funcionario` (func_codigo, func_nome, func_cpf, forn_end, forn_salario, ger_depto_cod, trab_depto_cod, proj_cod)
            VALUES (2, 'Ana Silva', '12345678944', 'Endereco', 3000, 2, 2, 2);
+
+SELECT func_nome, depto_nome, proj_numero
+FROM `bd_exercicio`.`tb_funcionario`
+INNER JOIN `bd_exercicio`.`tb_departamento` on depto_codigo = trab_depto_cod
+INNER JOIN `bd_exercicio`.`tb_projeto` on proj_codigo = proj_cod
